@@ -1,0 +1,999 @@
+defect /ˈdiːfekt/ n. 缺点，瑕疵
+
+flexible /ˈfleksəbl/ a. 易弯曲的；灵活的
+
+scent /sent/ n. 香味；踪迹 vt. 嗅到
+
+collide /kəˈlaɪd/ vi. 碰撞；冲突
+
+tragic /ˈtrædʒɪk/ a. 悲惨的；悲剧的
+
+erroneous /ɪˈroʊniəs/ a. 错误的
+
+shuttle /ˈʃʌtl/ n. 航天飞机；梭子
+
+participate /pɑːrˈtɪsɪpeɪt/ vi. 参加
+
+advantage /ədˈvæntɪdʒ/ n. 优点，好处
+
+exceptional /ɪkˈsepʃənl/ a. 杰出的；异常的
+
+hinder /ˈhɪndər/ vt. 妨碍
+
+hesitate /ˈhezɪteɪt/ v. 犹豫；不情愿
+
+compromise /ˈkɑːmprəmaɪz/ n./vi. 妥协
+
+underlying /ˌʌndərˈlaɪɪŋ/ a. 含蓄的，潜在的
+
+feedback /ˈfiːdbæk/ n. 反馈
+
+qualification /ˌkwɑːlɪfɪˈkeɪʃn/ n. 合格证书
+
+variable /ˈveriəbl/ a. 易变的 n. 变量
+
+enthusiastic /ɪnˌθuːziˈæstɪk/ a. 热情的
+
+precede /prɪˈsiːd/ vt. 在…之前
+
+range /reɪndʒ/ n. 一系列；范围
+
+episode /ˈepɪsoʊd/ n. 事件；插曲
+
+abuse /əˈbjuːz/ vt. 滥用；虐待；辱骂
+
+condemn /kənˈdem/ vt. 谴责；宣判
+
+appreciate /əˈpriːʃieɪt/ vt. 重视，欣赏
+
+sculpture /ˈskʌlptʃər/ n. 雕塑
+
+weird /wɪrd/ a. 古怪的
+
+previous /ˈpriːviəs/ a. 以前的
+
+wander /ˈwɑːndər/ vi. 漫游；走神
+
+supervise /ˈsuːpərvaɪz/ v. 监督
+
+mortal /ˈmɔːrtl/ a. 致命的
+
+explosive /ɪkˈsploʊsɪv/ a. 爆炸的 n. 炸药
+
+competence /ˈkɑːmpɪtəns/ n. 能力
+
+investigate /ɪnˈvestɪɡeɪt/ v. 调查
+
+eliminate /ɪˈlɪmɪneɪt/ vt. 排除；淘汰
+
+migrate /ˈmaɪɡreɪt/ vi. 迁移
+
+reckless /ˈrekləs/ a. 鲁莽的
+
+penalty /ˈpenəlti/ n. 处罚
+
+impose /ɪmˈpoʊz/ vt. 把…强加于
+
+accomplish /əˈkɑːmplɪʃ/ vt. 完成
+
+sponsor /ˈspɑːnsər/ n. 赞助者
+
+tumble /ˈtʌmbl/ vi. 跌倒
+
+uphold /ʌpˈhoʊld/ vt. 支持
+
+propel /prəˈpel/ vt. 推动
+
+descent /dɪˈsent/ n. 下降
+
+drawback /ˈdrɔːbæk/ n. 缺点
+
+illuminate /ɪˈluːmɪneɪt/ vt. 照明
+
+adhere /ədˈhɪr/ vi. 粘附；坚持
+
+indicative /ɪnˈdɪkətɪv/ a. 象征的
+
+reckon /ˈrekən/ v. 认为
+
+redundant /rɪˈdʌndənt/ a. 多余的
+
+dominate /ˈdɑːmɪneɪt/ vt. 支配
+
+reverse /rɪˈvɜːrs/ v. 颠倒 a. 反面的
+
+proportion /prəˈpɔːrʃn/ n. 比例
+
+calculate /ˈkælkjuleɪt/ vt. 计算
+
+identical /aɪˈdentɪkl/ a. 相同的
+
+innovation /ˌɪnəˈveɪʃn/ n. 创新
+
+intrigued /ɪnˈtriːɡd/ a. 好奇的
+
+epidemic /ˌepɪˈdemɪk/ n. 流行病
+
+encounter /ɪnˈkaʊntər/ vt./n. 遇到
+
+accelerate /əkˈseləreɪt/ v. 加快
+
+energetic /ˌenərˈdʒetɪk/ a. 精力充沛的
+
+heighten /ˈhaɪtn/ v. 加强
+
+passive /ˈpæsɪv/ a. 被动的
+
+consumption /kənˈsʌmpʃn/ n. 消耗
+
+bald /bɔːld/ a. 秃的
+
+spill /spɪl/ v. 溢出
+
+calorie /ˈkæləri/ n. 卡路里
+
+doubtful /ˈdaʊtfl/ a. 可疑的
+
+prevalent /ˈprevələnt/ a. 流行的
+
+appeal /əˈpiːl/ n./v. 恳求；吸引力
+
+dump /dʌmp/ vt. 倾倒
+
+yell /jel/ n./v. 叫喊
+
+saying /ˈseɪɪŋ/ n. 谚语
+
+forecast /ˈfɔːrkæst/ n./vt. 预测
+
+brew /bruː/ v. 酿造 n. 啤酒/茶
+
+circulation /ˌsɜːrkjəˈleɪʃn/ n. 循环
+
+perceive /pərˈsiːv/ vt. 感知
+
+appearance /əˈpɪrəns/ n. 出现；外表
+
+export /ɪkˈspɔːrt/ n./v. 出口
+
+transfer /trænsˈfɜːr/ v./n. 转移
+
+genetic /dʒəˈnetɪk/ a. 遗传的
+
+offspring /ˈɔːfsprɪŋ/ n. 后代
+
+distribute /dɪˈstrɪbjuːt/ vt. 分发
+
+accompany /əˈkʌmpəni/ vt. 陪伴
+
+persist /pərˈsɪst/ vi. 坚持
+
+differentiate /ˌdɪfəˈrenʃieɪt/ v. 区分
+
+perspective /pərˈspektɪv/ n. 视角
+
+fabricate /ˈfæbrɪkeɪt/ vt. 制造
+
+abundance /əˈbʌndəns/ n. 大量
+
+batch /bætʃ/ n. 一批
+
+elapse /ɪˈlæps/ vi. 时间流逝
+
+seal /siːl/ n. 封条；海豹
+
+mature /məˈtʃʊr/ a. 成熟的
+
+combination /ˌkɑːmbɪˈneɪʃn/ n. 组合
+
+lean /liːn/ v. 倾斜 a. 瘦的
+
+incline /ɪnˈklaɪn/ v. 倾斜
+
+index /ˈɪndeks/ n. 索引；指数
+
+nutrition /nuˈtrɪʃn/ n. 营养
+
+constant /ˈkɑːnstənt/ a. 持续不断的
+
+regardless /rɪˈɡɑːrdləs/ ad. 不管怎样
+
+refund /ˈriːfʌnd/ n. 退款；/rɪˈfʌnd/ vt. 退还
+
+discern /dɪˈsɜːrn/ vt. 察觉出；识别
+
+stumble /ˈstʌmbl/ vi. 绊倒；跌跌撞撞地走
+
+negligible /ˈneɡlɪdʒəbl/ a. 可忽略不计的
+
+assault /əˈsɔːlt/ n. 攻击，袭击
+
+transit /ˈtrænzɪt/ n. 运输
+
+concrete /ˈkɑːŋkriːt/ a. 具体的 n. 混凝土
+
+magnify /ˈmæɡnɪfaɪ/ vt. 放大；夸大
+
+poisonous /ˈpɔɪzənəs/ a. 有毒的；恶毒的
+
+virtual /ˈvɜːrtʃuəl/ a. 事实上的；虚拟的
+
+thesis /ˈθiːsɪs/ n. 论文，毕业论文
+
+predecessor /ˈpredəsesər/ n. 前辈；前任
+
+geology /dʒiˈɑːlədʒi/ n. 地质学
+
+invaluable /ɪnˈvæljuəbl/ a. 宝贵的，无价的
+
+adjacent /əˈdʒeɪsnt/ a. (to) 相邻的
+
+captive /ˈkæptɪv/ a. 被捕获的 n. 俘虏
+
+catholic /ˈkæθəlɪk/ a. 天主教的 n. 天主教徒
+
+adjoin /əˈdʒɔɪn/ vt. 贴近，与…毗连
+
+ballet /bæˈleɪ/ n. 芭蕾舞（团）
+
+traditional /trəˈdɪʃənl/ a. 传统的
+
+extraordinary /ɪkˈstrɔːrdəneri/ a. 非凡的
+
+perpetual /pərˈpetʃuəl/ a. 永恒的；不断的
+
+prejudice /ˈpredʒudɪs/ n. 偏见 vt. 使有偏见
+
+fancy /ˈfænsi/ vt./n. 喜欢；想象力
+
+optical /ˈɑːptɪkl/ a. 光的；视觉的
+
+consequence /ˈkɑːnsɪkwens/ n. 结果；重要性
+
+astronomy /əˈstrɑːnəmi/ n. 天文学
+
+catastrophe /kəˈtæstrəfi/ n. 大灾难
+
+foresee /fɔːrˈsiː/ vt. 预见
+
+prescribe /prɪˈskraɪb/ vt. 指定；开处方
+
+certify /ˈsɜːrtɪfaɪ/ vt. 证明；发证书
+
+absurd /əbˈsɜːrd/ a. 荒谬的
+
+donate /ˈdoʊneɪt/ v. 捐赠
+
+transplant /trænsˈplænt/ vt. 移植 n. 移植
+
+ample /ˈæmpl/ a. 足够的；大量的
+
+dynamic /daɪˈnæmɪk/ a. 有活力的 n. 动力
+
+terrific /təˈrɪfɪk/ a. 极好的；极大的
+
+cafeteria /ˌkæfəˈtɪriə/ n. 自助餐厅
+
+disregard /ˌdɪsrɪˈɡɑːrd/ vt. 不理会 n. 漠视
+
+overload /ˌoʊvərˈloʊd/ vt. 超负荷 n. 超载
+
+compel /kəmˈpel/ vt. 强迫
+
+ignorant /ˈɪɡnərənt/ a. (of) 无知的
+
+aggravate /ˈæɡrəveɪt/ vt. 加重；激怒
+
+inherent /ɪnˈhɪrənt/ a. (in) 内在的
+
+restore /rɪˈstɔːr/ vt. 恢复；归还
+
+preview /ˈpriːvjuː/ n. 预览；预告片
+
+explicit /ɪkˈsplɪsɪt/ a. 明确的
+
+anniversary /ˌænɪˈvɜːrsəri/ n. 周年纪念
+
+approach /əˈproʊtʃ/ v. 靠近 n. 途径；方法
+
+depict /dɪˈpɪkt/ vt. 描绘
+
+evolution /ˌevəˈluːʃn/ n. 演变，进化
+
+overcome /ˌoʊvərˈkʌm/ vt. 克服；压倒
+
+vigorous /ˈvɪɡərəs/ a. 精力充沛的
+
+recreation /ˌrekriˈeɪʃn/ n. 娱乐活动
+
+stable /ˈsteɪbl/ a. 稳定的 n. 马厩
+
+framework /ˈfreɪmwɜːrk/ n. 框架；体系
+
+brochure /broʊˈʃʊr/ n. 小册子
+
+consequent /ˈkɑːnsɪkwent/ a. 作为结果的
+
+occupy /ˈɑːkjupaɪ/ vt. 占用；占领
+
+profile /ˈproʊfaɪl/ n. 轮廓 vt. 描绘
+
+compose /kəmˈpoʊz/ vt. 构成；创作
+
+compulsory /kəmˈpʌlsəri/ a. 强制的，必修的
+
+personnel /ˌpɜːrsəˈnel/ n. 全体人员
+
+complicated /ˈkɑːmplɪkeɪtɪd/ a. 复杂的
+
+dioxide /daɪˈɑːksaɪd/ n. 二氧化碳
+
+nuisance /ˈnuːsns/ n. 讨厌的人/物
+
+toxic /ˈtɑːksɪk/ a. 有毒的
+
+offend /əˈfend/ vt. 冒犯；使厌恶
+
+retrieve /rɪˈtriːv/ vt. 重新得到；恢复
+
+inject /ɪnˈdʒekt/ vt. 注射；注入
+
+designate /ˈdezɪɡneɪt/ vt. 指派；标出
+
+vacuum /ˈvækjuəm/ n. 真空 v. 用吸尘器清扫
+
+polish /ˈpɑːlɪʃ/ vt. 抛光；润色 n. 擦光剂
+
+eligible /ˈelɪdʒəbl/ a. 有资格的
+
+antique /ænˈtiːk/ a. 古老的 n. 古董
+
+memorial /məˈmɔːriəl/ a. 纪念的 n. 纪念碑
+
+pedal /ˈpedl/ n. 踏板 v. 踩踏板
+
+hazard /ˈhæzərd/ n. 危险 vt. 尝试
+
+prophet /ˈprɑːfɪt/ n. 先知；预言家
+
+sacred /ˈseɪkrɪd/ a. 神圣的
+
+salute /səˈluːt/ vt. 向…敬礼 n. 敬礼
+
+proceed /prəˈsiːd/ vi. 继续进行
+
+slump /slʌmp/ vi. 暴跌 n. 低潮
+
+thrive /θraɪv/ vi. 兴旺，繁荣
+
+esteem /ɪˈstiːm/ n./vt. 尊重
+
+currency /ˈkɜːrənsi/ n. 货币；通行
+
+exert /ɪɡˈzɜːrt/ vt. 运用；努力
+
+oriental /ˌɔːriˈentl/ a. 东方的
+
+ignorance /ˈɪɡnərəns/ n. 无知
+
+kidney /ˈkɪdni/ n. 肾
+
+vain /veɪn/ a. 徒劳的；自负的
+
+violate /ˈvaɪəleɪt/ vt. 违反；侵犯
+
+cancel /ˈkænsl/ vt. 取消；抵消
+
+divorce /dɪˈvɔːrs/ v. 离婚；分离
+
+accord /əˈkɔːrd/ n. 一致 vt. 授予
+
+bribe /braɪb/ n. 贿赂 vt. 行贿
+
+economy /ɪˈkɑːnəmi/ n. 经济；节约
+
+identification /aɪˌdentɪfɪˈkeɪʃn/ n. 身份证明
+
+ability /əˈbɪləti/ n. 能力；才能
+
+brief /briːf/ a. 短暂的；简短的 n. 摘要
+
+conserve /kənˈsɜːrv/ vt. 保护，保存
+
+fraction /ˈfrækʃn/ n. 小部分；分数
+
+slash /slæʃ/ vt. 砍；大幅度削减 n. 砍
+
+bonus /ˈboʊnəs/ n. 奖金
+
+annual /ˈænjuəl/ a. 每年的 n. 年报
+
+metric /ˈmetrɪk/ a. 公制的，米制的
+
+profitable /ˈprɑːfɪtəbl/ a. 有利可图的
+
+precise /prɪˈsaɪs/ a. 精确的；严谨的
+
+notorious /noʊˈtɔːriəs/ a. 臭名昭著的
+
+residential /ˌrezɪˈdenʃl/ a. 居住的，住宅的
+
+conventional /kənˈvenʃənl/ a. 常规的
+
+subsidy /ˈsʌbsədi/ n. 补助金，津贴
+
+tub /tʌb/ n. 桶；盆，浴缸
+
+giant /ˈdʒaɪənt/ n. 巨人 a. 巨大的
+
+furnace /ˈfɜːrnɪs/ n. 火炉
+
+initial /ɪˈnɪʃl/ a. 开始的 n. 首字母
+
+incentive /ɪnˈsentɪv/ n. 刺激，鼓励
+
+sacrifice /ˈsækrɪfaɪs/ n. 牺牲；献祭 vt. 牺牲
+
+convert /kənˈvɜːrt/ v. (使)转变
+
+portion /ˈpɔːrʃn/ n. 一部分 vt. 分配
+
+lounge /laʊndʒ/ n. 休息厅 vi. 闲逛
+
+cozy /ˈkoʊzi/ a. 舒适的；亲切友好的
+
+scratch /skrætʃ/ v. 抓；刮擦 n. 抓痕
+
+relieve /rɪˈliːv/ vt. 使轻松；减轻
+
+precaution /prɪˈkɔːʃn/ n. 预防，警惕
+
+permanent /ˈpɜːrmənənt/ a. 永久的
+
+exaggerate /ɪɡˈzædʒəreɪt/ v. 夸大
+
+remedy /ˈremədi/ n. 补救办法 vt. 补救
+
+defy /dɪˈfaɪ/ vt. 违抗；藐视
+
+routine /ruːˈtiːn/ n. 例行公事 a. 例行的
+
+fake /feɪk/ n. 假货；骗子 a. 假的
+
+instruct /ɪnˈstrʌkt/ vt. 指示；教育
+
+occasional /əˈkeɪʒənl/ a. 偶尔的
+
+challenge /ˈtʃælɪndʒ/ n./v. 挑战
+
+equip /ɪˈkwɪp/ vt. 装备；使有准备
+
+initiate /ɪˈnɪʃieɪt/ vt. 开始；引入 n. 新加入者
+
+occupation /ˌɑːkjuˈpeɪʃn/ n. 职业；消遣
+
+suspect /səˈspekt/ vt. 推测 /ˈsʌspekt/ n. 可疑分子
+
+patience /ˈpeɪʃns/ n. 耐心
+
+endure /ɪnˈdʊr/ v. 忍受；忍耐
+
+gap /ɡæp/ n. 缺口；差距；不足
+
+cheat /tʃiːt/ v. 欺骗 n. 欺骗；骗子
+
+abundant /əˈbʌndənt/ a. 大量的；富裕的
+
+gaze /ɡeɪz/ v./n. 注视
+
+ideal /aɪˈdiːəl/ a. 理想的 n. 理想
+
+jealous /ˈdʒeləs/ a. 妒忌的；精心守护的
+
+payment /ˈpeɪmənt/ n. 支付的款项；支付
+
+revolve /rɪˈvɑːlv/ vi. 旋转
+
+sanction /ˈsæŋkʃn/ vt. 批准，处罚 n. 批准
+
+respectively /rɪˈspektɪvli/ ad. 分别地
+
+satisfactory /ˌsætɪsˈfæktəri/ a. 令人满意的
+
+skeptical /ˈskeptɪkl/ a. 表示怀疑的
+
+boost /buːst/ n. 提高；推动 vt. 提高
+
+householder /ˈhaʊshoʊldər/ n. 户主
+
+appliance /əˈplaɪəns/ n. 电器；装置
+
+generate /ˈdʒenəreɪt/ vt. 产生；引发
+
+drain /dreɪn/ v. 排走 n. 下水道
+
+integral /ˈɪntɪɡrəl/ a. 构成整体所必需的
+
+bankrupt /ˈbæŋkrʌpt/ a. 破产的 n. 破产者
+
+compact /kəmˈpækt/ a. 紧凑的 /ˈkɑːmpækt/ n. 合同
+
+immense /ɪˈmens/ a. 广大的，巨大的
+
+consume /kənˈsuːm/ vt. 消耗，浪费
+
+sensitive /ˈsensətɪv/ a. 敏感的；易生气的
+
+haunt /hɔːnt/ v. 常出现于 n. 常去的地方
+
+vanish /ˈvænɪʃ/ vi. 消失；不复存在
+
+complex /kəmˈpleks/ a. 复杂的
+
+freight /freɪt/ n. 货物 vt. 运送
+
+insulate /ˈɪnsəleɪt/ vt. 使绝缘；隔离
+
+implement /ˈɪmplɪment/ vt. 使生效，实施
+
+electrical /ɪˈlektrɪkl/ a. 电的
+
+efficient /ɪˈfɪʃnt/ a. 效率高的
+
+derive /dɪˈraɪv/ vt. 得到 vi. 起源
+
+keen /kiːn/ a. 热心的；着迷的
+
+casual /ˈkæʒuəl/ a. 马虎的；非正式的
+
+acquaintance /əˈkweɪntəns/ n. 熟人，认识
+
+embarrass /ɪmˈbærəs/ vt. 使尴尬
+
+inferior /ɪnˈfɪriər/ a. 劣等的 n. 下级
+
+parade /pəˈreɪd/ n. 游行，检阅
+
+donation /doʊˈneɪʃn/ n. 捐赠
+
+vague /veɪɡ/ a. 含糊的，模糊的
+
+construct /kənˈstrʌkt/ vt. 建造 n. 建筑物
+
+expose /ɪkˈspoʊz/ vt. 暴露；揭露
+
+betray /bɪˈtreɪ/ vt. 背叛；泄露
+
+embrace /ɪmˈbreɪs/ vt. 拥抱；欣然接受
+
+sample /ˈsæmpl/ n. 样品 vt. 取样
+
+upset /ʌpˈset/ vt. 使心烦意乱；打乱
+
+decisive /dɪˈsaɪsɪv/ a. 决定性的；坚定的
+
+expansive /ɪkˈspænsɪv/ a. 广阔的；开朗的
+
+conscience /ˈkɑːnʃəns/ n. 良心
+
+exemplify /ɪɡˈzemplɪfaɪ/ vt. 是…的典型
+
+sexual /ˈsekʃuəl/ a. 性的；性别的
+
+manufacture /ˌmænjuˈfæktʃər/ vt. 制造 n. 制品
+
+peculiar /pɪˈkjuːliər/ a. 奇怪的；特有的
+
+means /miːnz/ n. 方法
+
+output /ˈaʊtpʊt/ n. 产量；输出
+
+scope /skoʊp/ n. 范围；眼界
+
+reward /rɪˈwɔːrd/ n. 报答，奖赏
+
+nurture /ˈnɜːrtʃər/ n./vt. 养育，培育
+
+passion /ˈpæʃn/ n. 激情；酷爱
+
+quest /kwest/ n. 寻求，探索
+
+refrain /rɪˈfreɪn/ vi. 抑制，节制
+
+concern /kənˈsɜːrn/ n. 关心 v. 使担心
+
+collection /kəˈlekʃn/ n. 收藏品；收集
+
+correspondence /ˌkɔːrəˈspɑːndəns/ n. 通信；符合
+
+sufficient /səˈfɪʃnt/ a. 足够的，充分的
+
+illustrate /ˈɪləstreɪt/ vt. 说明；加插图
+
+abandon /əˈbændən/ vt. 放弃；抛弃
+
+miserable /ˈmɪzrəbl/ a. 痛苦的；可怜的
+
+trap /træp/ n. 陷阱；困境 vt. 使中圈套
+
+enclose /ɪnˈkloʊz/ vt. 围住；把…装入信封
+
+amaze /əˈmeɪz/ vt. 使惊奇
+
+unfold /ʌnˈfoʊld/ vi. 展开；显露 vt. 展开
+
+prime /praɪm/ a. 首要的；最好的 n. 盛年
+
+shift /ʃɪft/ v. 转移 n. 转变；轮班
+
+disrupt /dɪsˈrʌpt/ v. 使中断，扰乱
+
+graduate /ˈɡrædʒuət/ n. 毕业生 /ˈɡrædʒueɪt/ v. 毕业
+
+trend /trend/ n. 趋势；时尚
+
+critical /ˈkrɪtɪkl/ a. 批评的；严重的；关键的
+
+adequate /ˈædɪkwət/ a. 充足的；合格的
+
+dread /dred/ vt./n. 担忧，畏惧
+
+artificial /ˌɑːrtɪˈfɪʃl/ a. 人造的；假的
+
+inflation /ɪnˈfleɪʃn/ n. 通货膨胀；膨胀
+
+adjust /əˈdʒʌst/ vt. 调整；调节 vi. 适应
+
+stem /stem/ n. 茎；树干 v. 阻止
+
+misery /ˈmɪzəri/ n. 痛苦；不幸
+
+multiply /ˈmʌltɪplaɪ/ v. (使)增加；乘
+
+liberate /ˈlɪbəreɪt/ vt. 解放；释放
+
+dip /dɪp/ n. 浸，蘸 vi. 落下
+
+segment /ˈseɡmənt/ n. 部分；瓣 v. 分割
+
+setback /ˈsetbæk/ n. 挫折，退步
+
+imaginative /ɪˈmædʒɪnətɪv/ a. 富有想象力的
+
+portray /pɔːrˈtreɪ/ vt. 描绘；表现；扮演
+
+feast /fiːst/ n. 盛宴；节日 vi. 宴饮
+
+erase /ɪˈreɪs/ vt. 擦掉，抹去，清除
+
+administer /ədˈmɪnɪstər/ vt. 管理；实施
+
+assurance /əˈʃʊrəns/ n. 信心；保证
+
+scrutiny /ˈskruːtəni/ n. 详细检查，仔细观察
+
+gleam /ɡliːm/ vi./n. 闪烁；流露
+
+surf /sɜːrf/ v. 上网浏览信息 n. 激浪
+
+generous /ˈdʒenərəs/ a. 慷慨的；大量的
+
+optimistic /ˌɑːptɪˈmɪstɪk/ a. 乐观的
+
+impress /ɪmˈpres/ vt. 使敬佩；给…留下印象
+
+sightseeing /ˈsaɪtsiːɪŋ/ n. 观光
+
+champagne /ʃæmˈpeɪn/ n. 香槟酒
+
+entertain /ˌentərˈteɪn/ v. 款待；给…娱乐
+
+steer /stɪr/ vt. 驾驶；引导；掌舵
+
+frustrate /ˈfrʌstreɪt/ vt. 挫败；使受挫折
+
+definition /ˌdefɪˈnɪʃn/ n. 定义；清晰度
+
+attain /əˈteɪn/ vt. 达到；获得
+
+statement /ˈsteɪtmənt/ n. 声明；阐述
+
+exceed /ɪkˈsiːd/ vt. 超过
+
+originate /əˈrɪdʒɪneɪt/ vi. 起源于 vt. 创造
+
+reservation /ˌrezərˈveɪʃn/ n. 预订；保留
+
+obligation /ˌɑːblɪˈɡeɪʃn/ n. 义务，责任
+
+resolution /ˌrezəˈluːʃn/ n. 决心；解决
+
+discount /ˈdɪskaʊnt/ n. 折扣 /dɪsˈkaʊnt/ vt. 打折；不重视
+
+comprehensive /ˌkɑːmprɪˈhensɪv/ a. 全面的
+
+anyhow /ˈenihaʊ/ ad. 无论如何；随便地
+
+instant /ˈɪnstənt/ a. 立即的 n. 瞬间
+
+misfortune /ˌmɪsˈfɔːrtʃuːn/ n. 不幸，逆境
+
+extravagant /ɪkˈstrævəɡənt/ a. 奢侈的；过度的
+
+cling /klɪŋ/ vi. (to) 粘着；依恋；坚持
+
+complaint /kəmˈpleɪnt/ n. 抱怨；投诉；疾病
+
+skim /skɪm/ v. 浏览，略读；撇去
+
+dim /dɪm/ a. 昏暗的 v. (使)变暗淡
+
+collapse /kəˈlæps/ n. 倒塌；崩溃 vi. 倒塌；崩溃
+
+federal /ˈfedərəl/ adj. 联邦制的
+
+aboard /əˈbɔːrd/ ad. 在船/飞机/火车上
+
+devise /dɪˈvaɪz/ vt. 发明，设计
+
+venture /ˈventʃər/ n. 风险投资 v. 冒险；敢于
+
+clip /klɪp/ n. 夹子；回形针 vt. 夹住；剪
+
+stroke /stroʊk/ n. 中风；笔画；击球
+
+combat /ˈkɑːmbæt/ n. 战斗；战争 v. 战斗
+
+revenue /ˈrevənuː/ n. 收入；税收
+
+apart /əˈpɑːrt/ ad. 分开 a. 分离的
+
+repay /rɪˈpeɪ/ vt. 归还；报答
+
+bound /baʊnd/ a. 一定的；受约束的 vi. 跳跃；限制
+
+embark /ɪmˈbɑːrk/ v. 从事；上船
+
+corrupt /kəˈrʌpt/ a. 腐败的 vt. 使堕落
+
+recipe /ˈresəpi/ n. 烹饪法，食谱；秘诀
+
+disclose /dɪsˈkloʊz/ vt. 透露
+
+classic /ˈklæsɪk/ a. 经典的 n. 经典作品
+
+provision /prəˈvɪʒn/ n. 供应；条款；预备
+
+industrialize /ɪnˈdʌstriəlaɪz/ v. (使)工业化
+
+proposal /prəˈpoʊzl/ n. 提议；求婚
+
+flourish /ˈflɜːrɪʃ/ vi. 繁荣，兴旺 vt. 挥动
+
+coordinate /koʊˈɔːrdɪneɪt/ vt. 协调 /koʊˈɔːrdɪnət/ a. 同等的
+
+existence /ɪɡˈzɪstəns/ n. 存在；生存
+
+deem /diːm/ vt. 认为；相信
+
+merely /ˈmɪrli/ ad. 仅仅；只不过
+
+incredible /ɪnˈkredəbl/ a. 不可信的；难以置信的
+
+conduct /kənˈdʌkt/ vt. 进行；指挥 /ˈkɑːndʌkt/ n. 举止
+
+exotic /ɪɡˈzɑːtɪk/ a. 奇异的，异国的
+
+orbit /ˈɔːrbɪt/ n. 轨道 v. 绕轨道而行
+
+fare /fer/ n. 票价 vi. 进展
+
+conclude /kənˈkluːd/ v. 推断出；总结
+
+tremendous /trəˈmendəs/ a. 巨大的；极好的
+
+institution /ˌɪnstɪˈtuːʃn/ n. 制度；习俗；机构
+
+rare /rer/ a. 稀有的；珍贵的
+
+compensation /ˌkɑːmpenˈseɪʃn/ n. 赔偿
+
+abroad /əˈbrɔːd/ ad. 在国外
+
+lag /læɡ/ vi. 走得很慢，滞后 n. 间隔
+
+aware /əˈwer/ a. 意识到的
+
+grocery /ˈɡroʊsəri/ n. 食品杂货店；杂货
+
+incident /ˈɪnsɪdənt/ n. 事件；小事情
+
+concentrate /ˈkɑːnsntreɪt/ v. 集中；浓缩
+
+immune /ɪˈmjuːn/ a. 免疫的；不受影响的
+
+susceptible /səˈseptəbl/ a. 易受影响的；易感的
+
+infect /ɪnˈfekt/ vt. 传染；影响
+
+evidence /ˈevɪdəns/ n. 证据
+
+regulate /ˈreɡjuleɪt/ vt. 管理；调节
+
+advanced /ədˈvænst/ a. 先进的；年迈的
+
+effective /ɪˈfektɪv/ a. 有效的；实际的
+
+attitude /ˈætɪtuːd/ n. 态度；看法
+
+grant /ɡrænt/ n. 拨款 vt. 授予，同意
+
+access /ˈækses/ n. 入口 v. 到达，进入
+
+indifferent /ɪnˈdɪfrənt/ a. 漠不关心的；一般的
+
+crush /krʌʃ/ vt. 挤压；压坏；镇压
+
+elementary /ˌelɪˈmentri/ a. 基本的；初级的
+
+primary /ˈpraɪmeri/ a. 首要的；最初的
+
+curriculum /kəˈrɪkjələm/ n. 课程
+
+capable /ˈkeɪpəbl/ a. 有能力的
+
+outstanding /aʊtˈstændɪŋ/ a. 杰出的；显著的
+
+statesman /ˈsteɪtsmən/ n. 政治家
+
+harsh /hɑːrʃ/ a. 严厉的；刺耳的
+
+representative /ˌreprɪˈzentətɪv/ n. 代表 a. 典型的
+
+automation /ˌɔːtəˈmeɪʃn/ n. 自动化
+
+application /ˌæplɪˈkeɪʃn/ n. 申请；应用
+
+personality /ˌpɜːrsəˈnæləti/ n. 个性；人格
+
+tutor /ˈtuːtər/ n. 导师；家庭教师
+
+formula /ˈfɔːrmjələ/ n. 方案；公式；配方
+
+spit /spɪt/ v. 吐唾沫，吐出 n. 唾液
+
+relate /rɪˈleɪt/ vi. 有关联；涉及
+
+extreme /ɪkˈstriːm/ a. 极端的 n. 极端
+
+abnormal /æbˈnɔːrml/ a. 不正常的
+
+electrician /ɪˌlekˈtrɪʃn/ n. 电工
+
+fury /ˈfjʊri/ n. 暴怒，猛烈
+
+overhear /ˌoʊvərˈhɪr/ vt. 无意中听到
+
+paradise /ˈpærədaɪs/ n. 天堂，乐园
+
+muscular /ˈmʌskjələr/ a. 肌肉的；强壮的
+
+usage /ˈjuːsɪdʒ/ n. 使用，用法；惯用法
+
+saturate /ˈsætʃəreɪt/ vt. 使浸透，饱和
+
+acknowledge /əkˈnɑːlɪdʒ/ vt. 承认；接受
+
+imaginary /ɪˈmædʒɪneri/ a. 想象中的；虚构的
+
+approve /əˈpruːv/ vt. 赞成；许可
+
+verge /vɜːrdʒ/ n. 边缘；界限
+
+reliable /rɪˈlaɪəbl/ a. 可信赖的；可靠的
+
+accommodation /əˌkɑːməˈdeɪʃn/ n. 住处；住宿
+
+temporary /ˈtempəreri/ a. 暂时的，短暂的
+
+participant /pɑːrˈtɪsɪpənt/ n. 参与者
+
+likelihood /ˈlaɪklihʊd/ n. 可能，可能性
+
+register /ˈredʒɪstər/ n. 登记本 v. 登记；注册
+
+affect /əˈfekt/ v. 影响；使感动
+
+appetite /ˈæpɪtaɪt/ n. 胃口；食欲
+
+suppress /səˈpres/ vt. 压制；抑制
+
+destination /ˌdestɪˈneɪʃn/ n. 目的地；目标
+
+skip /skɪp/ v. 跳；跳过 n. 蹦跳
+
+intersection /ˌɪntərˈsekʃn/ n. 交叉；十字路口
+
+deficit /ˈdefɪsɪt/ n. 赤字，亏损
+
+consistent /kənˈsɪstənt/ a. 始终如一的；一致的
+
+reveal /rɪˈviːl/ vt. 揭露；展现
+
+disorder /dɪsˈɔːrdər/ n. 混乱；失调
+
+institute /ˈɪnstɪtuːt/ n. 协会 vt. 建立
+
+alter /ˈɔːltər/ v. 改变
+
+disguise /dɪsˈɡaɪz/ vt. 掩盖 n. 伪装
+
+instantaneous /ˌɪnstənˈteɪniəs/ a. 瞬间的
+
+offensive /əˈfensɪv/ a. 冒犯的 n. 进攻
+
+twist /twɪst/ v. 捻、扭、拧 n. 弯曲；转折
+
+desperate /ˈdespərət/ a. 不顾一切的；绝望的
+
+understanding /ˌʌndərˈstændɪŋ/ n. 理解；谅解
+
+neglect /nɪˈɡlekt/ vt./n. 忽略；疏忽
+
+interrupt /ˌɪntəˈrʌpt/ v. 打断，中止
+
+timely /ˈtaɪmli/ a. 及时的
+
+determination /dɪˌtɜːrmɪˈneɪʃn/ n. 决心；确定
+
+therapy /ˈθerəpi/ n. 治疗
+
+handicap /ˈhændikæp/ n. 缺陷；障碍 vt. 妨碍
+
+glide /ɡlaɪd/ vi./n. 滑行，滑翔
+
+invariably /ɪnˈveriəbli/ ad. 总是，不变地
+
+serial /ˈsɪriəl/ n. 连续剧 a. 连续的
+
+shabby /ˈʃæbi/ a. 破旧的；衣衫褴褛的
+
+gigantic /dʒaɪˈɡæntɪk/ a. 巨大的，庞大的
+
+invert /ɪnˈvɜːrt/ vt. 使反转，使颠倒
+
+predict /prɪˈdɪkt/ vt. 预测
+
+interview /ˈɪntərvjuː/ n./vt. 会见；面试
+
+overlook /ˌoʊvərˈlʊk/ vt. 忽视；俯瞰
+
+external /ɪkˈstɜːrnl/ a. 外部的 n. 外面
+
+contrary /ˈkɑːntreri/ a. 相反的 n. 相反
+
+exclaim /ɪkˈskleɪm/ v. 呼喊，惊叫
+
+prior /ˈpraɪər/ a. 优先的，在前的
+
+preference /ˈprefrəns/ n. 偏爱；偏爱的事物
+
+bold /boʊld/ a. 勇敢的；鲁莽的
+
+mercy /ˈmɜːrsi/ n. 仁慈；恩惠
+
+circular /ˈsɜːrkjələr/ a. 圆形的；循环的
+
+accustom /əˈkʌstəm/ vt. 使习惯于
+
+clarify /ˈklærəfaɪ/ v. 阐明，澄清
+
+permission /pərˈmɪʃn/ n. 许可
+
+illusion /ɪˈluːʒn/ n. 幻想；错觉
+
+agreeable /əˈɡriːəbl/ a. 令人愉快的；同意的
+
+schedule /ˈskedʒuːl/ n. 日程安排 vt. 安排
+
+abstract /ˈæbstrækt/ a. 抽象的 n. 摘要
