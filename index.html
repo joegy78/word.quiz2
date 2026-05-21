@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>语音背单词</title>
+    <style>
+        * { box-sizing: border-box; }
+        body {
+            margin: 0; padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+            user-select: none;
+            background: linear-gradient(135deg, #e0f7fa, #f3e5f5);
+            min-height: 100vh;
+        }
+        .cover-page {
+            display: flex; flex-direction: column; align-items: center;
+            justify-content: center; min-height: 100vh; padding: 30px; text-align: center;
+        }
+        .cover-page.hidden { display: none; }
+        .cover-icon { font-size: 72px; margin-bottom: 16px; }
+        .cover-title { font-size: 34px; font-weight: 800; color: #1a237e; margin-bottom: 6px; letter-spacing: 2px; }
+        .cover-subtitle { font-size: 15px; color: #666; margin-bottom: 28px; }
+        .cover-mode-cards { display: flex; gap: 16px; flex-wrap: wrap; justify-content: center; margin-bottom: 24px; }
+        .cover-mode-card {
+            background: white; border-radius: 20px; padding: 24px 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08); cursor: pointer;
+            transition: all 0.3s; text-align: center; width: 140px;
+        }
+        .cover-mode-card:hover { transform: translateY(-4px); box-shadow: 0 16px 40px rgba(0,0,0,0.14); }
+        .cover-mode-card:active { transform: scale(0.95); }
+        .cover-mode-icon { font-size: 44px; margin-bottom: 10px; }
+        .cover-mode-name { font-size: 17px; font-weight: 700; color: #1a237e; }
+        .cover-mode-desc { font-size: 12px; color: #999; margin-top: 4px; }
+        .cover-word-count { background: rgba(92,107,192,0.1); color: #5c6bc0; padding: 6px 16px; border-radius: 20px; font-size: 13px; font-weight: 600; }
+        .cover-footer { margin-top: 20px; font-size: 12px; color: #aaa; }
+        .admin-entry { position: fixed; bottom: 16px; right: 16px; font-size: 12px; color: #ccc; cursor: pointer; z-index: 100; background: none; border: none; opacity: 0.4; }
+        .admin-entry:hover { opacity: 1; color: #999; }
+        .modal-overlay { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); z-index: 200; align-items: center; justify-content: center; }
+        .modal-overlay.active { display: flex; }
+        .modal-box { background: white; border-radius: 20px; padding: 28px 22px; text-align: center; max-width: 320px; width: 90%; box-shadow: 0 20px 50px rgba(0,0,0,0.3); }
+        .modal-box h3 { margin: 0 0 6px 0; color: #1a237e; }
+        .modal-box p { font-size: 13px; color: #999; margin-bottom: 14px; }
+        .modal-box input { width: 100%; padding: 12px 14px; font-size: 16px; border: 2px solid #ddd; border-radius: 30px; text-align: center; outline: none; margin-bottom: 10px; }
+        .modal-box input:focus { border-color: #5c6bc0; }
+        .modal-box .btn-submit { background: #5c6bc0; color: white; border: none; padding: 12px 28px; font-size: 16px; border-radius: 30px; cursor: pointer; font-weight: 600; width: 100%; }
+        .modal-box .btn-cancel { background: #fff; color: #999; border: 1px solid #ddd; padding: 10px 28px; font-size: 14px; border-radius: 30px; cursor: pointer; margin-top: 6px; width: 100%; }
+        .modal-error { color: #e53935; font-size: 13px; margin-bottom: 6px; display: none; }
+        .quiz-page { display: none; flex-direction: column; align-items: center; justify-content: flex-start; min-height: 100vh; padding: 20px; }
+        .quiz-page.active { display: flex; }
+        .container { width: 100%; max-width: 420px; }
+        .back-btn { background: white; border: none; color: #5c6bc0; font-size: 15px; font-weight: 600; cursor: pointer; padding: 10px 18px; border-radius: 30px; margin-bottom: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); display: inline-flex; align-items: center; gap: 4px; }
+        .wordbank-tabs { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 12px; justify-content: center; }
+        .wordbank-tab { background: white; border: 2px solid #ddd; padding: 8px 14px; font-size: 13px; border-radius: 20px; cursor: pointer; font-weight: 500; transition: all 0.2s; }
+        .wordbank-tab:hover { border-color: #5c6bc0; }
+        .wordbank-tab.active { background: #5c6bc0; color: white; border-color: #5c6bc0; }
+        .card { background: white; border-radius: 24px; padding: 28px 20px; box-shadow: 0 20px 40px rgba(0,0,0,0.1); text-align: center; margin-bottom: 14px; }
+        .word { font-size: 46px; font-weight: 700; color: #1a237e; margin-bottom: 4px; letter-spacing: 2px; min-height: 56px; display: flex; align-items: center; justify-content: center; }
+        .phonetic { font-size: 15px; color: #888; margin-bottom: 6px; min-height: 20px; }
+        .progress { font-size: 13px; color: #aaa; margin-bottom: 16px; }
+        .btn-group { display: flex; gap: 8px; justify-content: center; flex-wrap: wrap; margin-bottom: 8px; }
+        .btn { border: none; padding: 12px 20px; font-size: 16px; border-radius: 50px; cursor: pointer; transition: all 0.3s; font-weight: 600; box-shadow: 0 6px 14px rgba(0,0,0,0.1); display: inline-flex; align-items: center; gap: 4px; }
+        .btn:active { transform: scale(0.95); }
+        .btn-start { background: #5c6bc0; color: white; }
+        .btn-stop { background: #ef5350; color: white; }
+        .feedback { margin-top: 16px; font-size: 19px; font-weight: 600; min-height: 30px; }
+        .correct { color: #2e7d32; }
+        .wrong { color: #c62828; }
+        .score-display { margin-top: 10px; font-size: 28px; font-weight: 800; min-height: 36px; }
+        .score-high { color: #2e7d32; }
+        .score-mid { color: #f57c00; }
+        .score-low { color: #c62828; }
+        .manual-input-area { display: flex; gap: 8px; margin-top: 10px; justify-content: center; }
+        .manual-input { flex: 1; padding: 12px 14px; font-size: 16px; border: 2px solid #ddd; border-radius: 30px; outline: none; text-align: center; max-width: 180px; }
+        .manual-input:focus { border-color: #5c6bc0; }
+        .btn-submit { background: #ff9800; color: white; border: none; padding: 12px 18px; font-size: 16px; border-radius: 30px; cursor: pointer; font-weight: 600; }
+        .word-list-section { background: white; border-radius: 24px; padding: 18px; box-shadow: 0 10px 30px rgba(0,0,0,0.06); display: none; margin-top: 10px; }
+        .word-list-section.visible { display: block; }
+        .section-title { font-weight: 700; color: #333; margin-bottom: 10px; font-size: 15px; }
+        .word-count-info { font-size: 12px; color: #999; margin-bottom: 8px; }
+        .file-import-area { border: 2px dashed #5c6bc0; border-radius: 14px; padding: 16px 12px; text-align: center; background: #f8f9ff; margin-bottom: 10px; cursor: pointer; }
+        .file-import-area:hover { background: #eef0ff; }
+        .file-import-icon { font-size: 30px; margin-bottom: 4px; }
+        .file-import-text { font-size: 13px; color: #5c6bc0; font-weight: 600; }
+        .file-import-sub { font-size: 11px; color: #999; margin-top: 2px; }
+        #fileInput { display: none; }
+        .file-name-display { font-size: 12px; color: #2e7d32; margin-top: 4px; }
+        textarea { width: 100%; min-height: 80px; font-size: 13px; padding: 10px; border: 2px solid #ddd; border-radius: 10px; font-family: inherit; resize: vertical; outline: none; }
+        textarea:focus { border-color: #5c6bc0; }
+        .btn-load { background: #43a047; color: white; border: none; padding: 10px 18px; font-size: 14px; border-radius: 30px; cursor: pointer; margin-top: 8px; font-weight: 600; width: 100%; }
+        .btn-reset { background: #fff; color: #999; border: 1px solid #ddd; padding: 8px 16px; font-size: 13px; border-radius: 30px; cursor: pointer; margin-top: 6px; width: 100%; }
+        .btn-logout { background: #fff; color: #e53935; border: 1px solid #e53935; padding: 8px 16px; font-size: 13px; border-radius: 20px; cursor: pointer; margin-top: 6px; width: 100%; }
+        .hint { margin-top: 10px; color: #999; font-size: 12px; text-align: center; }
+        .loading-text { font-size: 18px; color: #5c6bc0; font-weight: 600; }
+        @media (max-width: 400px) {
+            .cover-title { font-size: 28px; }
+            .cover-mode-card { width: 120px; padding: 18px 14px; }
+            .word { font-size: 38px; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="cover-page" id="coverPage">
+        <div class="cover-icon">📚</div>
+        <div class="cover-title">语音背单词</div>
+        <div class="cover-subtitle">听发音 · 跟读评分 · 练口语</div>
+        <div class="cover-mode-cards">
+            <div class="cover-mode-card" onclick="enterMode('voice')">
+                <div class="cover-mode-icon">🎤</div>
+                <div class="cover-mode-name">语音模式</div>
+                <div class="cover-mode-desc">跟读 · 评分</div>
+            </div>
+            <div class="cover-mode-card" onclick="enterMode('type')">
+                <div class="cover-mode-icon">⌨️</div>
+                <div class="cover-mode-name">打字模式</div>
+                <div class="cover-mode-desc">输入 · 拼写</div>
+            </div>
+        </div>
+        <div class="cover-word-count" id="coverWordCount">点击词库自动加载</div>
+        <div class="cover-footer">💡 支持四级 / 六级 / 酒店英语 / 自定义词库</div>
+    </div>
+
+    <button class="admin-entry" id="adminEntryBtn" onclick="showAdminLogin()">🔑 管理员</button>
+
+    <div class="modal-overlay" id="adminModal">
+        <div class="modal-box">
+            <h3>🔐 管理员验证</h3>
+            <p>输入密码以管理词库</p>
+            <div class="modal-error" id="modalError">密码错误</div>
+            <input type="password" id="adminPasswordInput" placeholder="请输入管理密码" autocomplete="off">
+            <button class="btn-submit" onclick="verifyAdmin()">确认</button>
+            <button class="btn-cancel" onclick="closeAdminModal()">取消</button>
+        </div>
+    </div>
+
+    <div class="quiz-page" id="quizPage">
+        <div class="container">
+            <button class="back-btn" onclick="goBack()">← 返回首页</button>
+
+            <div class="wordbank-tabs" id="wordbankTabs">
+                <div class="wordbank-tab active" data-bank="cet4" onclick="switchBank('cet4')">📘 四级高频</div>
+                <div class="wordbank-tab" data-bank="cet6" onclick="switchBank('cet6')">📙 六级高频</div>
+                <div class="wordbank-tab" data-bank="hotel" onclick="switchBank('hotel')">🏨 酒店英语</div>
+            </div>
+
+            <div class="card">
+                <div class="word" id="wordDisplay">---</div>
+                <div class="phonetic" id="phoneticDisplay"></div>
+                <div class="progress" id="progressDisplay">准备开始</div>
+
+                <div class="btn-group" id="voiceButtons">
+                    <button class="btn btn-start" id="btnStart" onclick="startVoiceQuiz()">🎤 开始答题</button>
+                    <button class="btn btn-stop" id="btnStop" onclick="stopQuiz()" style="display:none;">⏹️ 停止</button>
+                </div>
+
+                <div class="manual-input-area" id="typeInputArea" style="display:none;">
+                    <input type="text" class="manual-input" id="manualInput" placeholder="输入中文意思" autocomplete="off">
+                    <button class="btn-submit" onclick="submitManualAnswer()">确认</button>
+                </div>
+
+                <div class="score-display" id="scoreDisplay"></div>
+                <div class="feedback" id="feedbackDisplay"></div>
+            </div>
+
+            <div class="word-list-section" id="wordListSection">
+                <div class="section-title">📚 词库管理（管理员）</div>
+                <div class="word-count-info" id="wordCountInfo">当前词库：0 个单词</div>
+                <div class="file-import-area" id="fileDropZone" onclick="document.getElementById('fileInput').click()">
+                    <div class="file-import-icon">📂</div>
+                    <div class="file-import-text">点击选择词库文件上传（临时覆盖）</div>
+                    <div class="file-import-sub">支持 .txt / .csv</div>
+                    <div class="file-name-display" id="fileNameDisplay"></div>
+                </div>
+                <input type="file" id="fileInput" accept=".txt,.csv" onchange="handleFileSelect(event)">
+                <textarea id="wordListInput" placeholder="每行：英文,中文,音标(可选)"></textarea>
+                <button class="btn-load" onclick="loadFromTextarea()">📥 临时覆盖当前词库</button>
+                <button class="btn-reset" onclick="reloadFromGitHub()">🔄 重新从GitHub加载</button>
+                <button class="btn-logout" onclick="logoutAdmin()">🚪 退出管理</button>
+            </div>
+
+            <div class="hint">💡 词库托管在GitHub，更新txt文件后刷新网页即可同步</div>
+        </div>
+    </div>
+
+    <script>
+        const ADMIN_PASSWORD = "wodimima2024";
+        let isAdmin = false;
+
+        // 词库配置文件（文件名对应GitHub上的txt文件）
+        const bankConfig = {
+            cet4: { name: "四级高频", file: "cet4.txt" },
+            cet6: { name: "六级高频", file: "cet6.txt" },
+            hotel: { name: "酒店英语", file: "hotel.txt" }
+        };
+
+        let currentBank = 'cet4';
+        let wordList = [];
+        let currentIndex = 0;
+        let isQuizActive = false;
+        let recognition = null;
+        let currentMode = 'voice';
+        let expectedWord = null;
+        let isLoading = false;
+
+        const coverPage = document.getElementById("coverPage");
+        const quizPage = document.getElementById("quizPage");
+        const coverWordCount = document.getElementById("coverWordCount");
+        const wordDisplay = document.getElementById("wordDisplay");
+        const phoneticDisplay = document.getElementById("phoneticDisplay");
+        const progressDisplay = document.getElementById("progressDisplay");
+        const feedbackDisplay = document.getElementById("feedbackDisplay");
+        const scoreDisplay = document.getElementById("scoreDisplay");
+        const btnStart = document.getElementById("btnStart");
+        const btnStop = document.getElementById("btnStop");
+        const voiceButtons = document.getElementById("voiceButtons");
+        const typeInputArea = document.getElementById("typeInputArea");
+        const manualInput = document.getElementById("manualInput");
+        const wordListInput = document.getElementById("wordListInput");
+        const wordCountInfo = document.getElementById("wordCountInfo");
+        const wordListSection = document.getElementById("wordListSection");
+        const adminModal = document.getElementById("adminModal");
+        const adminPasswordInput = document.getElementById("adminPasswordInput");
+        const modalError = document.getElementById("modalError");
+        const adminEntryBtn = document.getElementById("adminEntryBtn");
+        const fileDropZone = document.getElementById("fileDropZone");
+        const fileInput = document.getElementById("fileInput");
+        const fileNameDisplay = document.getElementById("fileNameDisplay");
+
+        // ==================== 从GitHub加载词库 ====================
+        async function loadBankFromGitHub(bank) {
+            const config = bankConfig[bank];
+            if (!config) return;
+            isLoading = true;
+            updateCoverCountLoading();
+            try {
+                const response = await fetch(config.file);
+                if (!response.ok) throw new Error("文件加载失败");
+                const text = await response.text();
+                const newList = parseWordText(text);
+                if (newList.length > 0) {
+                    wordList = newList;
+                    saveWordListToLocal();
+                    updateWordListDisplay();
+                    updateCoverWordCountText();
+                }
+            } catch (e) {
+                console.error("加载词库失败:", e);
+                const saved = localStorage.getItem("wordList_" + bank);
+                if (saved) {
+                    try { wordList = JSON.parse(saved); } catch (e2) {}
+                }
+                updateCoverWordCountText();
+            }
+            isLoading = false;
+            updateCoverWordCountText();
+        }
+
+        function parseWordText(text) {
+            const lines = text.split(/[\r\n]+/).filter(l => l.trim());
+            const result = [];
+            for (let line of lines) {
+                const parts = line.replace(/，/g, ',').replace(/\t/g, ',').split(',');
+                if (parts.length >= 2 && parts[0].trim() && parts[1].trim()) {
+                    result.push({
+                        en: parts[0].trim(),
+                        ch: parts[1].trim(),
+                        phonetic: parts.length >= 3 ? parts[2].trim() : ''
+                    });
+                }
+            }
+            return result;
+        }
+
+        function saveWordListToLocal() {
+            localStorage.setItem("wordList_" + currentBank, JSON.stringify(wordList));
+            updateCoverWordCountText();
+        }
+
+        function updateCoverCountLoading() {
+            if (isLoading) {
+                coverWordCount.textContent = "⏳ 加载中...";
+            }
+        }
+
+        function updateCoverWordCountText() {
+            if (isLoading) {
+                coverWordCount.textContent = "⏳ 加载中...";
+                return;
+            }
+            const name = bankConfig[currentBank] ? bankConfig[currentBank].name : currentBank;
+            const count = wordList.length;
+            coverWordCount.textContent = `当前词库：${name} · ${count} 个单词`;
+        }
+
+        // ==================== 词库切换 ====================
+        async function switchBank(bank) {
+            if (isQuizActive) stopQuiz();
+            currentBank = bank;
+            updateTabActive();
+            wordList = [];
+            updateQuizUI();
+            updateWordListDisplay();
+            updateCoverWordCountText();
+            await loadBankFromGitHub(bank);
+            updateWordListDisplay();
+            updateCoverWordCountText();
+            if (quizPage.classList.contains("active")) {
+                updateQuizUI();
+            }
+        }
+
+        function updateTabActive() {
+            document.querySelectorAll(".wordbank-tab").forEach(tab => {
+                tab.classList.toggle("active", tab.dataset.bank === currentBank);
+            });
+        }
+
+        // ==================== 管理员功能 ====================
+        function showAdminLogin() {
+            if (isAdmin) return;
+            adminModal.classList.add("active");
+            adminPasswordInput.value = "";
+            modalError.style.display = "none";
+            setTimeout(() => adminPasswordInput.focus(), 200);
+        }
+
+        function closeAdminModal() { adminModal.classList.remove("active"); }
+
+        function verifyAdmin() {
+            if (adminPasswordInput.value.trim() === ADMIN_PASSWORD) {
+                isAdmin = true;
+                adminModal.classList.remove("active");
+                wordListSection.classList.add("visible");
+                adminEntryBtn.textContent = "🔓 管理";
+                adminEntryBtn.style.color = "#5c6bc0";
+                updateWordListDisplay();
+            } else {
+                modalError.style.display = "block";
+                adminPasswordInput.value = "";
+                adminPasswordInput.focus();
+            }
+        }
+
+        function logoutAdmin() {
+            isAdmin = false;
+            wordListSection.classList.remove("visible");
+            adminEntryBtn.textContent = "🔑 管理员";
+            adminEntryBtn.style.color = "#ccc";
+        }
+
+        function reloadFromGitHub() {
+            if (isQuizActive) stopQuiz();
+            loadBankFromGitHub(currentBank).then(() => {
+                updateWordListDisplay();
+                updateQuizUI();
+                feedbackDisplay.textContent = `✅ 已重新加载 ${wordList.length} 个单词`;
+                feedbackDisplay.className = "feedback correct";
+            });
+        }
+
+        adminPasswordInput.addEventListener("keydown", function(e) {
+            if (e.key === "Enter") verifyAdmin();
+        });
+
+        // ==================== 文件导入（管理员临时覆盖） ====================
+        function handleFileSelect(event) {
+            const file = event.target.files[0];
+            if (!file) return;
+            processFile(file);
+        }
+
+        function processFile(file) {
+            fileNameDisplay.textContent = `📄 ${file.name}`;
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                const newList = parseWordText(e.target.result);
+                if (newList.length === 0) { alert('格式错误'); return; }
+                wordList = newList;
+                saveWordListToLocal();
+                updateWordListDisplay();
+                updateQuizUI();
+                updateCoverWordCountText();
+                feedbackDisplay.textContent = `✅ 已加载 ${wordList.length} 词（临时覆盖）`;
+                feedbackDisplay.className = "feedback correct";
+            };
+            reader.readAsText(file, 'UTF-8');
+        }
+
+        function loadFromTextarea() {
+            if (!wordListInput.value.trim()) { alert('请粘贴词库'); return; }
+            const newList = parseWordText(wordListInput.value);
+            if (newList.length === 0) { alert('格式错误'); return; }
+            wordList = newList;
+            saveWordListToLocal();
+            updateWordListDisplay();
+            updateQuizUI();
+            updateCoverWordCountText();
+            feedbackDisplay.textContent = `✅ 已加载 ${wordList.length} 词（临时覆盖）`;
+            feedbackDisplay.className = "feedback correct";
+        }
+
+        fileDropZone.addEventListener('dragover', e => { e.preventDefault(); fileDropZone.style.borderColor = '#3949ab'; });
+        fileDropZone.addEventListener('dragleave', e => { e.preventDefault(); fileDropZone.style.borderColor = '#5c6bc0'; });
+        fileDropZone.addEventListener('drop', e => {
+            e.preventDefault();
+            fileDropZone.style.borderColor = '#5c6bc0';
+            if (e.dataTransfer.files[0]) processFile(e.dataTransfer.files[0]);
+        });
+
+        // ==================== 页面切换 ====================
+        function enterMode(mode) {
+            currentMode = mode;
+            coverPage.classList.add("hidden");
+            quizPage.classList.add("active");
+            if (isAdmin) wordListSection.classList.add("visible");
+            if (mode === 'voice') {
+                voiceButtons.style.display = 'flex';
+                typeInputArea.style.display = 'none';
+                btnStart.style.display = 'inline-flex';
+                btnStop.style.display = 'none';
+                scoreDisplay.textContent = '';
+            } else {
+                voiceButtons.style.display = 'none';
+                typeInputArea.style.display = 'flex';
+                scoreDisplay.textContent = '';
+                startTypeMode();
+            }
+            updateQuizUI();
+        }
+
+        function goBack() {
+            if (isQuizActive) stopQuiz();
+            quizPage.classList.remove("active");
+            coverPage.classList.remove("hidden");
+            updateCoverWordCountText();
+        }
+
+        function updateQuizUI() {
+            wordDisplay.textContent = "---";
+            phoneticDisplay.textContent = "";
+            progressDisplay.textContent = "准备开始";
+            feedbackDisplay.textContent = "";
+            feedbackDisplay.className = "feedback";
+            scoreDisplay.textContent = "";
+            scoreDisplay.className = "score-display";
+            btnStart.style.display = "inline-flex";
+            btnStop.style.display = "none";
+        }
+
+        function updateWordCount() {
+            const name = bankConfig[currentBank] ? bankConfig[currentBank].name : currentBank;
+            wordCountInfo.textContent = `当前词库：${name} · ${wordList.length} 个单词`;
+        }
+
+        function updateWordListDisplay() {
+            wordListInput.value = wordList.map(w => {
+                if (w.phonetic) return `${w.en},${w.ch},${w.phonetic}`;
+                return `${w.en},${w.ch}`;
+            }).join("\n");
+            updateWordCount();
+            updateCoverWordCountText();
+        }
+
+        // ==================== 语音合成 ====================
+        function speakText(text, lang = 'en-US', rate = 0.85) {
+            return new Promise(r => {
+                if (!('speechSynthesis' in window)) { r(); return; }
+                window.speechSynthesis.cancel();
+                const u = new SpeechSynthesisUtterance(text);
+                u.lang = lang; u.rate = rate;
+                u.onend = () => r(); u.onerror = () => r();
+                window.speechSynthesis.speak(u);
+            });
+        }
+
+        function initRecognition(lang = 'en-US') {
+            const SR = window.SpeechRecognition || window.webkitSpeechRecognition;
+            if (!SR) return null;
+            const rec = new SR();
+            rec.lang = lang;
+            rec.interimResults = false;
+            rec.maxAlternatives = 1;
+            rec.continuous = false;
+            return rec;
+        }
+
+        function startEnglishListening(callback) {
+            recognition = initRecognition('en-US');
+            if (!recognition) { callback(""); return; }
+            recognition.onresult = e => callback(e.results[0][0].transcript.trim().toLowerCase());
+            recognition.onerror = () => callback("");
+            try { recognition.start(); } catch (e) { callback(""); }
+        }
+
+        function calculateScore(userSpeech, targetWord) {
+            const clean = userSpeech.replace(/[^a-z]/g, '');
+            const target = targetWord.toLowerCase();
+            if (!clean) return 0;
+            if (clean === target) return 100;
+            let matches = 0;
+            const minLen = Math.min(clean.length, target.length);
+            for (let i = 0; i < minLen; i++) { if (clean[i] === target[i]) matches++; }
+            const baseScore = Math.round((matches / target.length) * 80);
+            const lengthPenalty = Math.abs(clean.length - target.length) * 5;
+            return Math.max(0, Math.min(100, baseScore - lengthPenalty + 10));
+        }
+
+        // ==================== 语音答题 ====================
+        async function startVoiceQuiz() {
+            if (isQuizActive) return;
+            if (wordList.length === 0) { alert('词库为空，请先选择词库或等待加载'); return; }
+            currentIndex = 0;
+            isQuizActive = true;
+            btnStart.style.display = 'none';
+            btnStop.style.display = 'inline-flex';
+            showCurrentWord();
+            await runVoiceRound();
+        }
+
+        async function runVoiceRound() {
+            if (!isQuizActive) return;
+            const word = wordList[currentIndex];
+            expectedWord = word.en;
+            wordDisplay.textContent = "🔊 请听发音...";
+            feedbackDisplay.textContent = "";
+            feedbackDisplay.className = "feedback";
+            scoreDisplay.textContent = "";
+            scoreDisplay.className = "score-display";
+            await speakText(word.en, 'en-US', 0.85);
+            await new Promise(r => setTimeout(r, 400));
+            wordDisplay.textContent = "🎙️ 请跟读";
+            feedbackDisplay.textContent = "正在听...";
+            feedbackDisplay.className = "feedback";
+            startEnglishListening(async (userSpeech) => {
+                if (!isQuizActive) return;
+                const score = calculateScore(userSpeech, expectedWord);
+                wordDisplay.textContent = expectedWord;
+                scoreDisplay.textContent = `得分：${score} 分`;
+                if (score >= 80) scoreDisplay.className = "score-display score-high";
+                else if (score >= 50) scoreDisplay.className = "score-display score-mid";
+                else scoreDisplay.className = "score-display score-low";
+                if (score >= 80) {
+                    feedbackDisplay.textContent = "✅ 发音标准！";
+                    feedbackDisplay.className = "feedback correct";
+                } else if (score >= 50) {
+                    feedbackDisplay.textContent = "⚠️ 还需练习";
+                    feedbackDisplay.className = "feedback";
+                } else {
+                    feedbackDisplay.textContent = "❌ 请再试一次";
+                    feedbackDisplay.className = "feedback wrong";
+                }
+                await new Promise(r => setTimeout(r, 1200));
+                if (!isQuizActive) return;
+                currentIndex++;
+                if (currentIndex >= wordList.length) { finishQuiz(); return; }
+                showCurrentWord();
+                await runVoiceRound();
+            });
+        }
+
+        function showCurrentWord() {
+            const w = wordList[currentIndex];
+            wordDisplay.textContent = w.en;
+            phoneticDisplay.textContent = w.phonetic || "";
+            progressDisplay.textContent = `第 ${currentIndex + 1} 个 / 共 ${wordList.length} 个`;
+        }
+
+        function stopQuiz() {
+            isQuizActive = false;
+            if (recognition) { try { recognition.stop(); } catch (e) {} }
+            window.speechSynthesis.cancel();
+            btnStart.style.display = 'inline-flex';
+            btnStop.style.display = 'none';
+            updateQuizUI();
+        }
+
+        async function finishQuiz() {
+            isQuizActive = false;
+            if (recognition) { try { recognition.stop(); } catch (e) {} }
+            window.speechSynthesis.cancel();
+            wordDisplay.textContent = '🎉';
+            scoreDisplay.textContent = '';
+            progressDisplay.textContent = '全部完成！';
+            feedbackDisplay.textContent = '太棒了！';
+            feedbackDisplay.className = 'feedback correct';
+            await speakText('太厉害了', 'zh-CN', 0.9);
+            btnStart.style.display = 'inline-flex';
+            btnStop.style.display = 'none';
+        }
+
+        // ==================== 打字模式 ====================
+        function startTypeMode() {
+            if (wordList.length === 0) return;
+            currentIndex = 0;
+            isQuizActive = true;
+            showCurrentWord();
+            manualInput.value = '';
+            manualInput.focus();
+            feedbackDisplay.textContent = '';
+            feedbackDisplay.className = 'feedback';
+            speakText(wordList[currentIndex].en, 'en-US', 0.85);
+        }
+
+        function submitManualAnswer() {
+            if (!isQuizActive || currentMode !== 'type') return;
+            const userAnswer = manualInput.value.trim();
+            if (!userAnswer) return;
+            const correct = wordList[currentIndex].ch;
+            if (userAnswer.includes(correct) || correct.includes(userAnswer)) {
+                feedbackDisplay.textContent = '✅ 正确！';
+                feedbackDisplay.className = 'feedback correct';
+            } else {
+                feedbackDisplay.textContent = `❌ 答案是：${correct}`;
+                feedbackDisplay.className = 'feedback wrong';
+            }
+            manualInput.value = '';
+            setTimeout(() => {
+                if (!isQuizActive) return;
+                currentIndex++;
+                if (currentIndex >= wordList.length) { finishTypeQuiz(); return; }
+                showCurrentWord();
+                manualInput.focus();
+                feedbackDisplay.textContent = '';
+                feedbackDisplay.className = 'feedback';
+                speakText(wordList[currentIndex].en, 'en-US', 0.85);
+            }, 800);
+        }
+
+        function finishTypeQuiz() {
+            isQuizActive = false;
+            wordDisplay.textContent = '🎉';
+            progressDisplay.textContent = '全部完成！';
+            feedbackDisplay.textContent = '太棒了！';
+            feedbackDisplay.className = 'feedback correct';
+            manualInput.value = '';
+        }
+
+        manualInput.addEventListener('keydown', function(e) {
+            if (e.key === 'Enter') submitManualAnswer();
+        });
+
+        // ==================== 初始化 ====================
+        window.onload = async () => {
+            voiceButtons.style.display = 'flex';
+            typeInputArea.style.display = 'none';
+            btnStart.style.display = 'inline-flex';
+            btnStop.style.display = 'none';
+            updateTabActive();
+            updateCoverWordCountText();
+            await loadBankFromGitHub(currentBank);
+            updateWordListDisplay();
+            updateCoverWordCountText();
+        };
+    </script>
+</body>
+</html>
